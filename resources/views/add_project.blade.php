@@ -20,14 +20,14 @@
 <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Create Folder</div>
+                <div class="card-header">Create Project</div>
 
                 <div class="card-body">
-                    <form class="form-horizontal" method="post" action="{{ url('add-folder') }}" name="add_folder" id="add_folder"> {{ csrf_field() }}
+                    <form class="form-horizontal" method="post" action="{{ url('add-project') }}" name="add_project" id="add_project"> {{ csrf_field() }}
 	                   	<div class="control-group">
-	                   		<label class="control-label">Folder Name</label>
+	                   		<label class="control-label">Project Name</label>
 		                   		<div class="controls">
-		                   			<input type="text" name="folder_name" id="folder_name"><br>
+		                   			<input type="text" name="project_name" id="project_name"><br>
 		                   		</div>
 	                    </div>
                         <div>

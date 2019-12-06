@@ -13,7 +13,7 @@
 Thank you for visiting our software survey. By filling out this 5 minute survey, you will help us identify issues and provide you with the best quality product and service.</p>
                 	</div>
                 	<hr>
-                    <form class="form-horizontal" method="post" action="{{ url('survey-template') }}" name="survey_template" id="survey_template"> {{ csrf_field() }}
+                    <form class="form-horizontal" method="post" action="{{ url('survey/survey-template1') }}" name="survey_template" id="survey_template"> {{ csrf_field() }}
 	                   	<div class="control-group">
 	                   		<label class="control-label">1. How easy was it to install the software?</label>
 		                   		<div class="controls">
@@ -86,17 +86,15 @@ Thank you for visiting our software survey. By filling out this 5 minute survey,
                         <div>
                             <br>
                         </div>
-	                    <div class="form-actions">
-	                    	<input type="submit" value="Take Survey" class="btn btn-success">	                    	
-	                    </div>
+	                  <div class="fr"><a href="{{ url('/survey/show-templates') }}" class="btn btn-primary btn-mini">Back</a>
+                      </div>
+       
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="form-actions">
-	    <input type="submit" value="OK" class="btn btn-success">
-	</div>
+  
 </div> 
 
 

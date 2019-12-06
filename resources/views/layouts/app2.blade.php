@@ -98,9 +98,9 @@
             <!-- Sidebar -->
             <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
               <h3 class="w3-bar-item">Menu</h3>
-              <a href="{{ url('view-folders') }}" class="w3-bar-item w3-button">Folder</a>
-              <a href="{{ url('add-file') }}" class="w3-bar-item w3-button">File</a>
-              <a href="#" class="w3-bar-item w3-button">Requirement</a>
+              <a href="{{ url('view-projects') }}" class="w3-bar-item w3-button">Project</a>
+              <a href="{{ url('add-artefact') }}" class="w3-bar-item w3-button">Artefact</a>
+              <a href="{{ url('req-table') }}" class="w3-bar-item w3-button">Requirement</a>
             </div>
 
             <!-- Page Content -->

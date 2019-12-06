@@ -21,8 +21,8 @@
 							<tr>
 								<th width="5%">No.</th>
 								<th width="40%">Requirements</th>
-								<th width="20%">Filename</th>
-								<th width="20%">Folder Name</th>
+								<th width="20%">Artefact Name</th>
+								<th width="20%">Project Name</th>
 								<th width="15%">Action</th>
 							</tr>
 						</thead>

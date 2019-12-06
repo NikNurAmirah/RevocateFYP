@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
-class CreateFileTable extends Migration
+class SurveyTemplate1 extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +13,14 @@ class CreateFileTable extends Migration
      */
     public function up()
     {
-        Schema::create('files', function (Blueprint $table) {
+         Schema::create('template1', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('folder_id');
-            $table->string('filename');
             $table->string('name');
-            $table->string('type');
-            $table->string('extension');
-            $table->rememberToken();
+            $table->string('desc');
+            $table->string('project');
+            $table->string('template');
             $table->timestamps();
+            $table->rememberToken();
         });
     }
 
@@ -33,6 +31,6 @@ class CreateFileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('file');
+        //
     }
 }
