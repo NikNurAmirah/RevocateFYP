@@ -23,7 +23,7 @@
                 <div class="card-header">Customer Feedback</div>
 
                 <div class="card-body">
-                    <form class="form-horizontal" method="post" action="{{ url('survey/survey-template2') }}" name="survey_template2" id="survey_template2"> {{ csrf_field() }}
+                    <form class="form-horizontal" method="post" action="{{ url('survey/view-survey2') }}" name="survey_template2" id="survey_template2"> {{ csrf_field() }}
 	                   	<div class="control-group">
 	                   		<label class="control-label">1. How often do you use the product or service?</label>
 		                   		<div class="controls">
@@ -55,9 +55,13 @@
                         <div>
                             <br>
                         </div>
-	                    <div class="fr"><a href="{{ url('/survey/show-templates') }}" class="btn btn-primary btn-mini">Back</a>
+	                    <div class="fr"><a href="#" class="btn btn-primary btn-mini">Submit</a>
 	                    </div>
                     </form>
+                    <hr>
+                    <div class="fr"><a href="{{ url('/survey/view-surveys') }}" class="btn btn-primary btn-mini">Back</a>
+	                 </div>
+                </div>
                 </div>
             </div>
         </div>

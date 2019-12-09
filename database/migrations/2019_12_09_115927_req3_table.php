@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class SurveyTemplate3 extends Migration
+class Req3Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class SurveyTemplate3 extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('req3s', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('req_input');
+            $table->timestamps();
+            $table->rememberToken();
+            
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class SurveyTemplate3 extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('req3');   
     }
 }

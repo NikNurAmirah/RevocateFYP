@@ -1,16 +1,16 @@
 @extends('layouts.app2')
 @section('content')
 
-<h1>View Projects</h1>
+<h1>View Responses</h1>
 <div class="container-fluid">
-	<div class="fr"><a href="{{ url('add-project') }}" class="btn btn-primary btn-mini">Create New Project</a></div>
+	{{-- <div class="fr"><a href="{{ url('add-project') }}" class="btn btn-primary btn-mini">Create New Project</a></div> --}}
 		<hr>
 	<div class="row-fluid">
 		<div class="span12">
 
 			<div class="widget-box">
 				<div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-					<h5>Projects</h5>
+					<h5>Responses</h5>
 				</div>
 				<div class="widget-content nopadding">
 					<table class="table table-bordered data-table">
@@ -27,7 +27,7 @@
 							<tr class="gradeX">
 								<td> {{ $project->id }} </td>
 								<td>
-								    <a href="{{ url('show-project/'.$project->id.'/view') }}" style="text-decoration: underline">{{ $project->name }}</a>
+								    <a href="{{ url('show-project',[$project->id]) }}" style="text-decoration: underline">{{ $project->name }}</a>
                                 
 								 
 								</td>

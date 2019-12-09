@@ -4,7 +4,7 @@
 <h1>Requirements</h1>
 <div class="container-fluid">
 	<div class="fr">
-		<a href="{{ url('/survey/responses-survey1') }}" class="btn btn-primary btn-mini">Add New</a>
+		<a href="{{ url('/survey/responses-survey2') }}" class="btn btn-primary btn-mini">Add New</a>
 	</div>
 		<hr>
 	<div class="row-fluid">
@@ -22,31 +22,21 @@
 								<th width="5%">No.</th>
 								<th width="80%">Requirements</th>
 								<th width="15%">Action</th>
-								
 							</tr>
 						</thead>
 
 						<tbody>
+							@foreach($req2s as $req)
 							
-							@foreach($reqs as $req)
 							<tr class="gradeX">
-							
 								<td> {{ $req->id }} </td>
 								<td> {{ $req->req_input }} </td>
-								
 								<td class="center">
-									<div class="fr"><a href="{{ url('edit-req1/'.$req->id) }}" class="btn btn-primary btn-mini">Edit</a> <a  id="delFolder" href="{{ url('delete-req1/'.$req->id) }}" class="btn btn-danger btn-mini">Delete</a>
+									<div class="fr"><a href="{{ url('edit-req2/'.$req->id) }}" class="btn btn-primary btn-mini">Edit</a> <a id="delFolder" href="{{ url('delete-req2/'.$req->id) }}" class="btn btn-danger btn-mini">Delete</a>
 								</div>
+							</td>
 							</tr>
-							
 							@endforeach
-								
-							
-
-							
-							
-							
-							
 							{{-- <tr>
 								<td>1.</td>
 								<td>The user shall be able to login with email and password</td>
@@ -58,14 +48,11 @@
 									</div>
 								</td>
 							</tr> --}}
-							{{-- @foreach($folders as $folder)
+						{{-- 	@foreach($folders as $folder)
 							<tr class="gradeX">
 								<td> {{ $folder->id }} </td>
 								<td> {{ $folder->name }} </td>
-								<td class="center">
-									<div class="fr"><a href="{{ url('edit-folder/'.$folder->id) }}" class="btn btn-primary btn-mini">Edit</a> <a id="delFolder" href="{{ url('delete-folder/'.$folder->id) }}" class="btn btn-danger btn-mini">Delete</a>
-									</div>
-								</td>
+								
 							</tr>
 							@endforeach --}}
 						</tbody>

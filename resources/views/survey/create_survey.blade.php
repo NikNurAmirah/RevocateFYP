@@ -41,8 +41,14 @@
 	                    <div class="control-group">
 	                   		<label class="control-label">Project</label>
 		                   		<div class="controls">
-                                    <select name="project_id" style="width: 220px">
-                                        <option value="">Projects</option>
+                                   <select name="project_name" style="width: 220px">
+                                        
+                                          {{--   <a href="">{{$project->name}}</a> --}}
+                                        
+                                            @foreach($projects as $a) 
+                                                 <option>{{$a->name}}</option> 
+                                            @endforeach
+                                        
                                     </select>
 		                   		</div>
                                 <br>
@@ -51,9 +57,12 @@
 	                   		<label class="control-label">Template</label>
 		                   		<div class="controls">
 		                   			<select name="template" style="width: 220px">
-                                        <option value="survey1">Survey Template 1</option>
-                                        <option value="survey2">Survey Template 2</option>
-                                        <option value="survey3">Survey Template 3</option>
+                                        <option href="{{ url('survey/survey1') }}" value="survey1">Software Evaluation Survey</option>
+
+                                        <option href="{{ url('survey/survey2') }}" value="survey2">Customer Feedback</option>
+                                        
+                                        <option href="{{ url('survey/survey3') }}" value="survey3">Customer Satisfactory Feedback</option>
+
                                     </select>
 		                   		</div>
                                 <br>
@@ -61,8 +70,9 @@
                         <div>
                             <br>
                         </div>
-	                    <div class="form-actions">
-	                    	<input type="submit" value="Create" class="btn btn-success"><br><br><a href="{{ url('/survey/show-templates') }}" class="btn btn-primary btn-mini">Back</a>	                    	
+	                    <div style="display: inline-block;" class="form-actions">
+	                    	<input type="submit" value="Create" class="btn btn-success">
+                            <a href="{{ url('/survey/view-surveys') }}" class="btn btn-primary btn-mini">Cancel</a>	                    	
 	                    </div>
 
                     </form>

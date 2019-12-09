@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArtefactTable extends Migration
+class InsertSurveyTwo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateArtefactTable extends Migration
      */
     public function up()
     {
-        Schema::create('artefacts', function (Blueprint $table) {
+       Schema::create('survey_twos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('project_name');
-            $table->string('artefact_name');
-            $table->string('artefact_type');
-            $table->string('extension');
-            $table->rememberToken();
+            $table->string('q1_2');
+            $table->string('q2_2');
+            $table->string('q3_2');
+            $table->string('q4_2');
             $table->timestamps();
+            $table->rememberToken();
         });
     }
 
@@ -31,6 +31,6 @@ class CreateArtefactTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artefact');
+       Schema::dropIfExists('survey_two');
     }
 }

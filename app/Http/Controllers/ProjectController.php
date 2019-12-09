@@ -5,8 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 
+
 class ProjectController extends Controller
 {
+    public function __construct(){
+    $this->middleware('auth');
+    }
+
     public function addProject(Request $request){
     	if ($request->isMethod('post')) {
     		$data = $request->all();
@@ -49,8 +54,9 @@ class ProjectController extends Controller
     	return view('view_projects', compact('projects'));
     }
 
-    public function showProject(){
-        return view('show_project');
+    public function showProject(Project $project){
+
+        return view('show_project')->with(compact('project'));
 
 
     }

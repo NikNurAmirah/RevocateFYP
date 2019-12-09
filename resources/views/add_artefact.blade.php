@@ -23,15 +23,17 @@
                 <div class="card-header">Create Interview Artefact</div>
 
                 <div class="card-body">
-                    <form class="form-horizontal" method="post" action="{{ url('add-artefact') }}" name="add_artefact" id="add_artefact"> {{ csrf_field() }}
+                    <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ url('/uploadartefact') }}" name="add_artefact" id="add_artefact"> {{ csrf_field() }}
 	                   	<div class="control-group">
 	                   		<label class="control-label">Project</label>
 		                   		<div class="controls">
                                     <select name="project_name" style="width: 220px">
-                                        <?php echo $projects_dropdown; ?>
+                                      
+                                       @foreach($projects as $a) {{-- to view the created project name --}} 
+                                       <option>{{$a->name}}</option> 
+                                       @endforeach
                                         
                                     </select>
-		                   			{{-- <input type="text" name="folder_name" id="folder_name"><br> --}}
 		                   		</div>
                                 <br>
 	                    </div>
@@ -46,10 +48,9 @@
                         <div class="control-group">
                             <label class="control-label">Artefact Type</label>
                                 <div class="controls">
-                                    <select name="adtefact_type" style="width: 220px">
+                                    <select name="artefact_type" style="width: 220px">
                                     <option value="audio">Audio</option>
                                     <option value="video">Video</option>
-                                    {{-- <input type="text" name="artefact_type" id="artefact_type"><br> --}}
                                 </select>
                                 </div>
                                 <br>
@@ -58,7 +59,7 @@
                         <div class="control-group d-flex flex-column">
                             <label class="control-label">Upload Artefact</label>
                                 <div class="controls">
-                                    <input type="file" name="audio" id="artefact_upload"><br>
+                                    <input type="file" name="extension" id="extension"><br>
                                 </div>
                                 <br>
                         </div>

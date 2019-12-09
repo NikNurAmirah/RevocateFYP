@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container">
-    @if(Session::has('flash_message_error'))
+   {{--  @if(Session::has('flash_message_error'))
     <div class="alert alert-error alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
             <strong>{!! session('flash_message_error') !!}</strong>
@@ -15,7 +15,7 @@
             <strong>{!! session('flash_message_success') !!}</strong>
         
     </div>
-    @endif
+    @endif --}}
 
 <div class="row justify-content-center">
         <div class="col-md-8">

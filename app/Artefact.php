@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artefact extends Model
 {
-    public $table = "artefact";
+    public $table = "artefacts";
+
+    public $fillable = ['project_name','artefact_name','artefact_type','extension'];
+
 }
